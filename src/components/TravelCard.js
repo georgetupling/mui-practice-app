@@ -19,7 +19,7 @@ const TravelCard = () => {
 
           <Box sx={{ display: "flex", alignItems: "center" }}>
             <AccessTime sx={{ width: "1rem" }} />
-            <Typography variant="body" component="p" marginLeft={0.5}>
+            <Typography variant="body2" component="p" marginLeft={0.5}>
               5 hours
             </Typography>
           </Box>
@@ -32,10 +32,10 @@ const TravelCard = () => {
               size="small"
               readOnly
             />
-            <Typography marginLeft={0.5} variant="body1" component="p">
+            <Typography marginLeft={0.5} variant="body2" component="p">
               4.5
             </Typography>
-            <Typography marginLeft={1.5} variant="body2" component="p">
+            <Typography marginLeft={1.5} variant="body3" component="p">
               (655 Reviews)
             </Typography>
           </Box>
