@@ -7,42 +7,43 @@ import AccessTime from "@mui/icons-material/AccessTime";
 import Rating from "@mui/material/Rating";
 import css from "./TravelCard.css";
 
-const TravelCard = () => {
+const TravelCard = (props) => {
+  const tour = props.tour;
   return (
     <Grid item xs={12} sm={6} md={4} lg={3}>
       <Paper elevation={3}>
-        <img src="images/waterfall.jpg"></img>
+        <img src={tour.image}></img>
         <Box paddingX={1}>
           <Typography variant="subtitle1" component="h2">
-            Immerse in the Falls
+            {tour.name}
           </Typography>
 
           <Box sx={{ display: "flex", alignItems: "center" }}>
             <AccessTime sx={{ width: "1rem" }} />
             <Typography variant="body2" component="p" marginLeft={0.5}>
-              5 hours
+              {tour.duration} hours
             </Typography>
           </Box>
 
           <Box marginTop={3} sx={{ display: "flex", alignItems: "center" }}>
             <Rating
               name="read-only"
-              value={4.5}
+              value={tour.rating}
               precision={0.5}
               size="small"
               readOnly
             />
             <Typography marginLeft={0.5} variant="body2" component="p">
-              4.5
+              {tour.rating}
             </Typography>
             <Typography marginLeft={1.5} variant="body3" component="p">
-              (655 Reviews)
+              ({tour.numberOfReviews} Reviews)
             </Typography>
           </Box>
 
           <Box>
             <Typography variant="h6" component="p">
-              From £147
+              £{tour.price}
             </Typography>
           </Box>
         </Box>
