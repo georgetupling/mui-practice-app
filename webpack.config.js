@@ -1,11 +1,13 @@
 const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
+const connectHistoryApiFallback = require("connect-history-api-fallback");
 
 module.exports = {
   entry: path.join(__dirname, "src", "index.js"),
   output: {
     filename: "[name].bundle.js",
     path: path.resolve(__dirname, "dist"),
+    publicPath: "/",
   },
   module: {
     rules: [
@@ -34,5 +36,6 @@ module.exports = {
     static: path.join(__dirname, "dist"),
     compress: true,
     port: 8080,
+    historyApiFallback: true,
   },
 };

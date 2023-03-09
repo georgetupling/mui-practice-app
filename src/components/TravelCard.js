@@ -5,7 +5,7 @@ import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
 import AccessTime from "@mui/icons-material/AccessTime";
 import Rating from "@mui/material/Rating";
-import css from "./TravelCard.css";
+import "./TravelCard.css";
 
 const TravelCard = (props) => {
   const tour = props.tour;
