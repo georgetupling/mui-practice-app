@@ -5,14 +5,13 @@ import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
 import AccessTime from "@mui/icons-material/AccessTime";
 import Rating from "@mui/material/Rating";
-import "./TravelCard.css";
 
 const TravelCard = (props) => {
   const tour = props.tour;
   return (
     <Grid item xs={12} sm={6} md={4} lg={3}>
       <Paper elevation={3}>
-        <img src={tour.image}></img>
+        <img src={tour.image} style={{ width: "100%", height: "6rem" }}></img>
         <Box paddingX={1}>
           <Typography variant="subtitle1" component="h2">
             {tour.name}
